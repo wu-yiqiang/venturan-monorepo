@@ -1,0 +1,17 @@
+
+.site-layout {
+  height: 100vh;
+  .Header {
+    padding: 0 20px 0 0;
+    line-height: 0; 
+    height: $--topbar-height;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .Content {
+     padding: 10px;
+      height: calc(100vh - $--topbar-height);
+      overflow-y: hidden;
+    }
+}

@@ -1,0 +1,8 @@
+.BottomMiddleBox {
+  @include card-frame;
+  background-color: #0c2d55;
+  .echarts-for-react {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}

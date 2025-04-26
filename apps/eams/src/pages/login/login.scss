@@ -1,0 +1,95 @@
+.Login {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('@/assets/images/background.webp');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  .logo-box {
+    padding: 20px 50px 100px 50px;
+    img {
+      width: 187px;
+    }
+  }
+  .bottom-box {
+    padding: 0 10% 0 14%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    .left-box {
+      .first-title {
+        font-size: 120px;
+        font-weight: 700;
+        color: rgba(255, 122, 0, 1);
+      }
+      .second-title {
+        font-size: 34px;
+        font-weight: 500;
+        color: rgb(174, 173, 173);
+      }
+    }
+    .right-box {
+      .card {
+          border-radius: 4px;
+          padding: 30px;
+          background-color: #fff;
+          .title {
+            font-size: 34px;
+            font-weight: 700;
+            display: grid;
+            place-content: center;
+            margin-bottom: 20px;
+          }
+          .content-box {
+            width: 400px;
+            .LoginFace {
+                width: 100%;
+                margin-bottom: 20px;
+                display: grid;
+                place-content: center;
+                video {
+                  border-radius: 3px;
+                }
+              }
+            
+              .ant-form-item {
+                .ant-row {
+                  width: 100%;
+                }
+              }
+          }
+          
+          .opts-box {
+            width: 100%;
+            margin-top: 10px;
+            display: grid;
+            place-content: center;
+            .content {
+              .item-left {
+                  text-align: right;
+                  cursor: pointer;
+                }
+              
+                .opts-devide {
+                  margin: 0 10px;
+                }
+              
+                .item-right {
+                  text-align: left;
+                  cursor: pointer;
+                }
+            }
+            
+          }
+        }
+      
+        .submit {
+          display: flex;
+          justify-content: space-between;
+        }
+    }
+  }
+}
