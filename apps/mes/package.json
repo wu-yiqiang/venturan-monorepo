@@ -1,0 +1,12 @@
+{
+  "name": "@venturan-monorepo/mes",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite"
+  },
+  "dependencies": {
+    "@venturan-monorepo/mes": "file:",
+    "@venturan-monorepo/utils": "workspace:^"
+  }
+}

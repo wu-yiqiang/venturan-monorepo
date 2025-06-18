@@ -1,0 +1,15 @@
+{
+  "name": "@venturan-monorepo/sre",
+  "private": true,
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vite"
+  },
+  "dependencies": {
+    "@venturan-monorepo/sre": "file:",
+    "@venturan-monorepo/utils": "workspace:^",
+    "@venturan-monorepo/vue-pc-ui": "workspace:^"
+  }
+}
