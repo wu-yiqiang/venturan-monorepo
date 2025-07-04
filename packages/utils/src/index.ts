@@ -21,7 +21,7 @@ const generateCanvasFingerprint = () => {
 
         // 获取绘图上下文
         const ctx = canvas.getContext('2d');
-
+    
         // 填充背景
         ctx.fillStyle = 'white';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
