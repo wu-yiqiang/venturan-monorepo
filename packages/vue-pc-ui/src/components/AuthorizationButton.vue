@@ -8,7 +8,7 @@
 const props = defineProps({
 	code: {
 		type: String,
-		default: '100%'
+		default: ''
 	},
 })
 const isAuth = computed(() => {
