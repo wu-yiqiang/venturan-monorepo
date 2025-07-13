@@ -3,9 +3,10 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "dev": "vite"
+    "start": "vite"
   },
   "dependencies": {
+    "@arco-design/web-react": "^2.66.1",
     "@venturan-monorepo/mes": "file:",
     "@venturan-monorepo/utils": "workspace:^"
   }

@@ -1,10 +1,10 @@
 <template>
   <section class="App">
-    <Button />
+    <Layout />
   </section>
 </template>
 <script lang="ts" setup>
-import {Button} from '@venturan-monorepo/vue-pc-ui'
+import Layout from '@/layout/index.vue'
 </script>
 <style lang="scss" scoped>
 //.App{}

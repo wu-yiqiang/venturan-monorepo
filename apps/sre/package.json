@@ -5,11 +5,15 @@
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "dev": "vite"
+    "start": "vite"
   },
   "dependencies": {
+    "@micro-zoe/micro-app": "1.0.0-rc.26",
     "@venturan-monorepo/sre": "file:",
     "@venturan-monorepo/utils": "workspace:^",
     "@venturan-monorepo/vue-pc-ui": "workspace:^"
+  },
+  "devDependencies": {
+    "@arco-design/web-vue": "^2.57.0"
   }
 }

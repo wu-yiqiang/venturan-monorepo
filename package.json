@@ -2,6 +2,11 @@
   "name": "@venturan-monorepo/root",
   "private": true,
   "version": "1.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "start:sre": "pnpm run --F @venturan-monorepo/sre start",
+    "start:mes": "pnpm run --F @venturan-monorepo/mes start"
+  },
   "dependencies": {
     "@venturan-monorepo/root": "file:",
     "react": "^18.2.0",
