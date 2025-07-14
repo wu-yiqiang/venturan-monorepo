@@ -76,3 +76,24 @@ const GenBroswerFingerptint = () => {
             });
     }
 }
+
+
+// 分时函数封装
+const performChunk = (datas, taskHandler) => {
+    if (typeof datas === 'number') {
+        datas = {length: datas}
+    }
+    if (datas.length === 0) return
+    let i = 0
+    const _run = () => {
+        if (i >= datas.length) return
+        requestIdleCallback((idle) => {
+            while (idle.timeRemaining() >= 0 && i < datas.length) {
+                taskHandler(datas[i], i)
+                i++
+            }
+            _run()
+        })
+    }
+    _run()
+}
