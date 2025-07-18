@@ -1,5 +1,5 @@
 {
-  "name": "@venturan-monorepo/sre",
+  "name": "@venturan-monorepo/common",
   "private": true,
   "version": "1.0.0",
   "main": "src/index.js",
@@ -8,7 +8,8 @@
     "start": "vite"
   },
   "dependencies": {
-    "@venturan-monorepo/sre": "file:",
+    "@micro-zoe/micro-app": "1.0.0-rc.26",
+    "@venturan-monorepo/common": "file:",
     "@venturan-monorepo/utils": "workspace:^",
     "@venturan-monorepo/vue-pc-ui": "workspace:^"
   },

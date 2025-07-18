@@ -1,5 +1,5 @@
 <template>
-  <!-- <a-layout class="layout-demo">
+  <a-layout class="layout-demo">
     <a-layout-sider
       hide-trigger
       collapsible
@@ -64,13 +64,15 @@
           <a-breadcrumb-item>App</a-breadcrumb-item>
         </a-breadcrumb>
         <a-layout-content>
-          <micro-app name="mes" url="http://192.168.1.222:8981/" />
+          <div style="width: 100%;height: 100%;">
+                      <micro-app name="src" url="http://192.168.1.222:8982" />
+
+          </div>
         </a-layout-content>
         <a-layout-footer>Footer</a-layout-footer>
       </a-layout>
     </a-layout>
-  </a-layout> -->
-  vue3
+  </a-layout>
 </template>
 <script>
 import { defineComponent, ref } from 'vue';

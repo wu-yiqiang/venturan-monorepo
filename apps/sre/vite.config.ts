@@ -14,7 +14,12 @@ export default defineConfig({
   server: {
     host: '0.0.0.0',
     hmr: true,
-    port: 8980,
+    port: 8982,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'access-control-allow-methods': '*',
+      'access-control-expose-headers': '*'
+    },
     proxy: {
       '/prod-api': {
         target: `http://192.168.1.222:8000/`,

@@ -4,8 +4,9 @@
   "version": "1.0.0",
   "main": "index.ts",
   "scripts": {
-    "start:sre": "pnpm run --F @venturan-monorepo/sre start",
-    "start:mes": "pnpm run --F @venturan-monorepo/mes start"
+    "start:common": "pnpm run --F @venturan-monorepo/common start",
+    "start:mes": "pnpm run --F @venturan-monorepo/mes start",
+    "start:sre": "pnpm run --F @venturan-monorepo/sre start"
   },
   "dependencies": {
     "@venturan-monorepo/root": "file:",

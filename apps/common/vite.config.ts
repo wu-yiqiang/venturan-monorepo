@@ -1,16 +1,20 @@
 import { defineConfig } from 'vite'
-import React from '@vitejs/plugin-react'
+import vue from '@vitejs/plugin-vue'
+import { resolve } from 'path'
+const pathResolve = (dir: string): string => {
+  return resolve(__dirname, '.', dir)
+}
 export default defineConfig({
-  plugins: [React()],
+  resolve: {
+    alias: {
+      '@': pathResolve('src/')
+    }
+  },
+  plugins: [vue()],
   server: {
     host: '0.0.0.0',
     hmr: true,
-    port: 8981,
-    headers: {
-      'Access-Control-Allow-Origin': '*',
-      'access-control-allow-methods': '*',
-      "access-control-expose-headers": '*'
-    },
+    port: 8980,
     proxy: {
       '/prod-api': {
         target: `http://192.168.1.222:8000/`,
