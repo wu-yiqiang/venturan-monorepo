@@ -11,9 +11,6 @@ export default function App() {
     //     <RouterProvider router={routes} />
     //   </Suspense>
     // </ConfigProvider>
-    <>
       <Button type="primary">Hello Arco</Button>
-      {/* <micro-app name="sub-app" url="http://localhost:8381/" baseroute="/sub-app"></micro-app> */}
-    </>
   )
 }

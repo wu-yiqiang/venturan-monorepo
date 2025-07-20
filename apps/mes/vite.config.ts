@@ -1,15 +1,15 @@
 import { defineConfig } from 'vite'
-import React from '@vitejs/plugin-react'
+import react from '@vitejs/plugin-react'
 export default defineConfig({
-  plugins: [React()],
+  plugins: [react()],
   server: {
     host: '0.0.0.0',
     hmr: true,
     port: 8981,
     headers: {
-      'Access-Control-Allow-Origin': '*',
       'access-control-allow-methods': '*',
-      "access-control-expose-headers": '*'
+      'access-control-expose-headers': '*',
+      'access-control-allow-origin': '*'
     },
     proxy: {
       '/prod-api': {

@@ -20,6 +20,9 @@ importers:
       vue:
         specifier: ^3.5.17
         version: 3.5.17(typescript@5.8.3)
+      vue-router:
+        specifier: ^4.5.1
+        version: 4.5.1(vue@3.5.17(typescript@5.8.3))
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.5.2
@@ -30,6 +33,25 @@ importers:
       vite:
         specifier: ^6.3.3
         version: 6.3.3(@types/node@22.15.2)(sass@1.87.0)
+
+  apps/common:
+    dependencies:
+      '@micro-zoe/micro-app':
+        specifier: 1.0.0-rc.26
+        version: 1.0.0-rc.26
+      '@venturan-monorepo/common':
+        specifier: 'file:'
+        version: file:apps/common
+      '@venturan-monorepo/utils':
+        specifier: workspace:^
+        version: link:../../packages/utils
+      '@venturan-monorepo/vue-pc-ui':
+        specifier: workspace:^
+        version: link:../../packages/ui/vue-pc-ui
+    devDependencies:
+      '@arco-design/web-vue':
+        specifier: ^2.57.0
+        version: 2.57.0(vue@3.5.17(typescript@5.8.3))
 
   apps/dsm:
     dependencies:
@@ -54,9 +76,6 @@ importers:
 
   apps/sre:
     dependencies:
-      '@micro-zoe/micro-app':
-        specifier: 1.0.0-rc.26
-        version: 1.0.0-rc.26
       '@venturan-monorepo/sre':
         specifier: 'file:'
         version: file:apps/sre
@@ -560,6 +579,9 @@ packages:
   '@types/node@22.15.2':
     resolution: {integrity: sha512-uKXqKN9beGoMdBfcaTY1ecwz6ctxuJAcUlwE55938g0ZJ8lRxwAZqRz2AJ4pzpt5dHdTPMB863UZ0ESiFUcP7A==}
 
+  '@venturan-monorepo/common@file:apps/common':
+    resolution: {directory: apps/common, type: directory}
+
   '@venturan-monorepo/dsm@file:apps/dsm':
     resolution: {directory: apps/dsm, type: directory}
 
@@ -596,6 +618,9 @@ packages:
 
   '@vue/compiler-ssr@3.5.17':
     resolution: {integrity: sha512-hkDbA0Q20ZzGgpj5uZjb9rBzQtIHLS78mMilwrlpWk2Ep37DYntUz0PonQ6kr113vfOEdM+zTBuJDaceNIW0tQ==}
+
+  '@vue/devtools-api@6.6.4':
+    resolution: {integrity: sha512-sGhTPMuXqZ1rVOk32RylztWkfXTRhuS7vgAKv0zjqk8gbsHkJ7xfFf+jbySxt7tWObEJwyKaHMikV/WGDiQm8g==}
 
   '@vue/reactivity@3.5.17':
     resolution: {integrity: sha512-l/rmw2STIscWi7SNJp708FK4Kofs97zc/5aEPQh4bOsReD/8ICuBcEmS7KGwDj5ODQLYWVN2lNibKJL1z5b+Lw==}
@@ -982,6 +1007,11 @@ packages:
         optional: true
       yaml:
         optional: true
+
+  vue-router@4.5.1:
+    resolution: {integrity: sha512-ogAF3P97NPm8fJsE4by9dwSYtDwXIY1nFY9T6DyQnGHd1E2Da94w9JIolpe42LJGIl0DwOHBi8TcRPlPGwbTtw==}
+    peerDependencies:
+      vue: ^3.2.0
 
   vue@3.5.17:
     resolution: {integrity: sha512-LbHV3xPN9BeljML+Xctq4lbz2lVHCR6DtbpTf5XIO6gugpXUN49j2QQPcMj086r9+AkJ0FfUT8xjulKKBkkr9g==}
@@ -1395,6 +1425,12 @@ snapshots:
       undici-types: 6.21.0
     optional: true
 
+  '@venturan-monorepo/common@file:apps/common':
+    dependencies:
+      '@micro-zoe/micro-app': 1.0.0-rc.26
+      '@venturan-monorepo/utils': link:packages/utils
+      '@venturan-monorepo/vue-pc-ui': link:packages/ui/vue-pc-ui
+
   '@venturan-monorepo/dsm@file:apps/dsm':
     dependencies:
       '@venturan-monorepo/utils': link:packages/utils
@@ -1467,6 +1503,8 @@ snapshots:
     dependencies:
       '@vue/compiler-dom': 3.5.17
       '@vue/shared': 3.5.17
+
+  '@vue/devtools-api@6.6.4': {}
 
   '@vue/reactivity@3.5.17':
     dependencies:
@@ -1836,6 +1874,11 @@ snapshots:
       '@types/node': 22.15.2
       fsevents: 2.3.3
       sass: 1.87.0
+
+  vue-router@4.5.1(vue@3.5.17(typescript@5.8.3)):
+    dependencies:
+      '@vue/devtools-api': 6.6.4
+      vue: 3.5.17(typescript@5.8.3)
 
   vue@3.5.17(typescript@5.8.3):
     dependencies:

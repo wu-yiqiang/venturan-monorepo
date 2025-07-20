@@ -1,4 +1,4 @@
-import './public.path'
+import './public-path'
 import { createApp } from 'vue'
 import ArcoVue from '@arco-design/web-vue'
 import App from './App.vue'
