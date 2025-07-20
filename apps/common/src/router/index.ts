@@ -6,7 +6,7 @@ export const routers: Array<RouteRecordRaw> = featureRouters
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    // component: Layout,
+    component: Layout,
     // redirect: '/scaner',
     children: routers
   },
