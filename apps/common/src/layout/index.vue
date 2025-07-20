@@ -20,9 +20,9 @@
           <IconCalendar @click="handleRouter" />
           User
         </a-menu-item>
-        <a-menu-item key="0_3">
+        <a-menu-item key="0_3" @click="handleMicroApp">
           <IconCalendar />
-          Menu 3
+          MES
         </a-menu-item>
       </a-menu>
     </a-layout-sider>
@@ -40,9 +40,8 @@
           <a-breadcrumb-item>App</a-breadcrumb-item>
         </a-breadcrumb>
         <a-layout-content>
-          <RouterView />
-          <!--           <micro-app name="mes" url="http://192.168.1.222:8981/" />
- -->
+          <RouterView v-if="!isMicroApp" />
+          <micro-app v-else baseroute='/sre' name="sre" inline disableSandbox url="http://192.168.1.222:8982" />
         </a-layout-content>
         <a-layout-footer>Footer</a-layout-footer>
       </a-layout>
@@ -60,16 +59,21 @@ import {
 } from '@arco-design/web-vue/es/icon';
 import { RouterView } from 'vue-router';
 import router from '@/router';
+let isMicroApp = ref(false)
 const collapsed = ref(false);
-    const onCollapse = () => {
-      collapsed.value = !collapsed.value;
-    };
-    const handleRouter = () => {
-      router.push('/systems/users')
-    }
-    const  onClickMenuItem = (key: string) => {
-        Message.info({ content: `You select ${key}`, showIcon: true });
-      }
+const onCollapse = () => {
+  collapsed.value = !collapsed.value;
+};
+const handleRouter = () => {
+  isMicroApp.value = false
+  router.push('/systems/users')
+}
+const handleMicroApp = () => {
+  isMicroApp.value = true
+}
+const onClickMenuItem = (key: string) => {
+    Message.info({ content: `You select ${key}`, showIcon: true });
+  }
 </script>
 <style scoped >
 .layout-demo {
