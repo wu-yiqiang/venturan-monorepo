@@ -11,6 +11,6 @@ export default function App() {
     //     <RouterProvider router={routes} />
     //   </Suspense>
     // </ConfigProvider>
-      <Button type="primary">Hello Arco</Button>
+      <Button type="primary">MES APP BUtton</Button>
   )
 }
