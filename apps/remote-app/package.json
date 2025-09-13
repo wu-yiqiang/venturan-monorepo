@@ -1,0 +1,17 @@
+{
+  "name": "@venturan-monorepo/remote-components",
+  "private": true,
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "@originjs/vite-plugin-federation": "^1.4.1"
+  },
+  "dependencies": {
+    "vite-plugin-top-level-await": "^1.6.0"
+  }
+}

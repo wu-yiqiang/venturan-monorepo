@@ -1,15 +1,18 @@
 <template>
-  <section class="Roles">
-    <Settings title="我是common传入的参数"></Settings>
+  <section class="Button">
+   设置页面 {{ title }}
   </section>
 </template>
 <script lang="ts" setup>
 import { reactive, watch, computed, ref } from 'vue'
-import Settings from 'remote_app/settings'
-
+const props = defineProps({
+    title: {
+      type: String,
+      default: '',
+    },
+});
 </script>
 <style lang="scss" scoped>
-.Roles{
-  color: red;
-}
+
+//.Button{}
 </style>

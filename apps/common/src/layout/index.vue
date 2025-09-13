@@ -12,7 +12,7 @@
         :style="{ width: '100%' }"
         @menuItemClick="onClickMenuItem"
       >
-        <a-menu-item key="0_1" disabled>
+        <a-menu-item key="0_1" @click="handleRole">
           <IconHome />
           Menu 1
         </a-menu-item>
@@ -68,6 +68,10 @@ const onCollapse = () => {
 const handleRouter = () => {
   isMicroApp.value = false
   router.push('/systems/users')
+}
+const handleRole = () => {
+  isMicroApp.value = false
+  router.push('/systems/roles')
 }
 const handleMicroApp = () => {
   isMicroApp.value = true
