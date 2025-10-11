@@ -97,3 +97,5 @@ const performChunk = (datas, taskHandler) => {
     }
     _run()
 }
+
+const tree2Lists = (source)=>{ let res = [] source.forEach(el=>{ res.push(el) el.children && res.push(...tree2Lists(el.children)) }) return res }
