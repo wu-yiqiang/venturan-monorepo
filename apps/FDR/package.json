@@ -1,0 +1,19 @@
+{
+  "name": "@venturan-monorepo/fdr",
+  "private": true,
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "vite"
+  },
+  "dependencies": {
+    "@venturan-monorepo/common": "workspace:^",
+    "@venturan-monorepo/vue-pc-ui": "workspace:^",
+    "@venturan-monorepo/fdr": "file:",
+    "@venturan-monorepo/utils": "workspace:^"
+  },
+  "devDependencies": {
+    "@arco-design/web-vue": "^2.57.0"
+  }
+}

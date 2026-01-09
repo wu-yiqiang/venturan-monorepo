@@ -13,7 +13,7 @@ export default defineConfig({
     },
     proxy: {
       '/prod-api': {
-        target: `http://192.168.1.222:8000/`,
+        target: `http://192.168.1.222:8001/`,
         changeOrigin: true,
         ws: true,
         rewrite: (path) => path.replace(/^\/prod-api/, '')

@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "main": "index.ts",
   "scripts": {
+    "start:all": "pnpm -r --parallel run start",
     "start:common": "pnpm run --F @venturan-monorepo/common start",
     "start:mes": "pnpm run --F @venturan-monorepo/mes start",
     "start:sre": "pnpm run --F @venturan-monorepo/sre start"

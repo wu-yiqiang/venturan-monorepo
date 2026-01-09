@@ -34,6 +34,25 @@ importers:
         specifier: ^6.3.3
         version: 6.3.3(@types/node@22.15.2)(sass@1.87.0)
 
+  apps/FDR:
+    dependencies:
+      '@venturan-monorepo/common':
+        specifier: workspace:^
+        version: link:../../packages/common
+      '@venturan-monorepo/fdr':
+        specifier: 'file:'
+        version: file:apps/FDR
+      '@venturan-monorepo/utils':
+        specifier: workspace:^
+        version: link:../../packages/utils
+      '@venturan-monorepo/vue-pc-ui':
+        specifier: workspace:^
+        version: link:../../packages/ui/vue-pc-ui
+    devDependencies:
+      '@arco-design/web-vue':
+        specifier: ^2.57.0
+        version: 2.57.0(vue@3.5.17(typescript@5.8.3))
+
   apps/common:
     dependencies:
       '@micro-zoe/micro-app':
@@ -77,7 +96,7 @@ importers:
         specifier: workspace:^
         version: link:../../packages/utils
 
-  apps/remote-components:
+  apps/remote-app:
     dependencies:
       vite-plugin-top-level-await:
         specifier: ^1.6.0
@@ -103,6 +122,12 @@ importers:
         specifier: ^2.57.0
         version: 2.57.0(vue@3.5.17(typescript@5.8.3))
 
+  packages/common:
+    dependencies:
+      '@venturan-monorepo/common':
+        specifier: 'file:'
+        version: 'link:'
+
   packages/ui/vue-pc-ui: {}
 
   packages/utils:
@@ -110,10 +135,6 @@ importers:
       '@venturan-monorepo/utils':
         specifier: 'file:'
         version: 'link:'
-
-  packages/vue-pc-ui: {}
-
-  ui/vue-pc-ui: {}
 
 packages:
 
@@ -688,6 +709,9 @@ packages:
 
   '@venturan-monorepo/dsm@file:apps/dsm':
     resolution: {directory: apps/dsm, type: directory}
+
+  '@venturan-monorepo/fdr@file:apps/FDR':
+    resolution: {directory: apps/FDR, type: directory}
 
   '@venturan-monorepo/mes@file:apps/mes':
     resolution: {directory: apps/mes, type: directory}
@@ -1617,6 +1641,12 @@ snapshots:
   '@venturan-monorepo/dsm@file:apps/dsm':
     dependencies:
       '@venturan-monorepo/utils': link:packages/utils
+
+  '@venturan-monorepo/fdr@file:apps/FDR':
+    dependencies:
+      '@venturan-monorepo/common': link:packages/common
+      '@venturan-monorepo/utils': link:packages/utils
+      '@venturan-monorepo/vue-pc-ui': link:packages/ui/vue-pc-ui
 
   '@venturan-monorepo/mes@file:apps/mes(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
